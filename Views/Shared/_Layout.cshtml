@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulder's Greek Festival - A Taste of Orthodoxy - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("A Taste of Orthodoxy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Schedule", "Schedule", "Home")</li>
+                        <li>@Html.ActionLink("Menu", "Menu", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content" style="background-image: url('/Content/Images/fadedbackground.jpg')">
+            <div class="jumbotron">
+                <h1 id="header" style="font-size:200%">A Taste of Orthodoxy - 2014 - <i>Best one yet!</i></h1>
+                <h3 style="text-align:center; font-style:italic; font-weight:bold; color:yellow">"Boulder's Greek Festival"</h3>
+                <div style="font-size:67%; text-align:center;">
+                    (Click on a date for pictures from this year's festival) <br/>
+                    <span style="white-space:nowrap">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <span style="white-space:nowrap"><a href="http://www.tasteoforthodoxy.org/content/pictures/09-05-2014/" target="_new">Friday Sept 5<sup>th</sup></a></span>&nbsp;
+                        <span style="white-space:nowrap">11am to 10pm</span>&nbsp;
+                        <i class="glyphicon glyphicon-star"></i>
+                    </span>
+
+                    <span style="white-space:nowrap">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <span style="white-space:nowrap"><a href="http://www.tasteoforthodoxy.org/content/pictures/09-06-2014/" target="_new">Saturday Sept 6<sup>th</sup></a></span>&nbsp;
+                        <span style="white-space:nowrap">11am to 10pm</span>&nbsp;
+                        <i class="glyphicon glyphicon-star"></i>
+                    </span>
+
+                    <span style="white-space:nowrap">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <span style="white-space:nowrap"><a href="http://www.tasteoforthodoxy.org/content/pictures/09-07-2014/" target="_new">Sunday Sept 7<sup>th</sup></a></span>&nbsp;
+                        <span style="white-space:nowrap">11am to 6pm</span>
+                        <i class="glyphicon glyphicon-star"></i>
+                    </span>
+                    <br/>
+                    <h2 style="color:yellow">Thank you to everyone for coming out!  See you next year!</h2>
+                    
+
+                </div>
+            </div>
+
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Sts Peter & Paul Greek Orthodox Church</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
